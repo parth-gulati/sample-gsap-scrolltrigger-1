@@ -17,7 +17,7 @@
         <img src="./images/mountain_right.png" id="mountain_right" />
     </section>
     <div class="sec">
-        <h2>ScrollTrigger is ez</h2>
+        <h2>Koi Kasol le chalo pls</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fugiat rem, asperiores hic accusamus modi ad ab
             esse consequatur a est, eos, cum vitae. Voluptate quidem ipsum quisquam iure pariatur?
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolores numquam facilis inventore rerum
@@ -51,6 +51,78 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.to('#bg', {
+            scrollTrigger: {
+                scrub: 1
+            },
+            scale: 1.5
+        })
+
+        gsap.to('#man', {
+            scrollTrigger: {
+                scrub: 1
+            },
+            scale: 0.5,
+        })
+
+        gsap.to('#mountain_left', {
+            scrollTrigger: {
+                scrub: 1
+            },
+            x: -500
+        })
+
+        gsap.to('#mountain_right', {
+            scrollTrigger: {
+                scrub: 1
+            },
+            x: 500
+        })
+
+        gsap.to('#clouds_1', {
+            scrollTrigger: {
+                scrub: 1
+            },
+            x: 200
+        })
+
+        gsap.to('#clouds_2', {
+            scrollTrigger: {
+                scrub: 1
+            },
+            x: -200
+        })
+
+        gsap.to('#text', {
+            scrollTrigger: {
+                scrub: 1
+            },
+            y: 500
+        })
+
+        gsap.from(".sec h2", {
+            scrollTrigger: {
+                scrub: 1,
+                trigger: 'section',
+                start: 'top+100px'
+            },
+            opacity: 0,
+            x: 200
+        })
+
+        gsap.from(".sec p", {
+            scrollTrigger: {
+                scrub: 1,
+                trigger: 'section',
+                start: 'top+100px'
+            },
+            opacity: 0,
+            x: -200
+        })
+
+    </script>
 </body>
 
 </html>
